@@ -5,7 +5,6 @@ const JobsPage: FC = () => {
     return (
         <div>
             <Jobs/>
-            
         </div>
     );
 };

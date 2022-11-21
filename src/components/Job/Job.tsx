@@ -19,13 +19,19 @@ const Job: FC <IProps> = ({job}) => {
         <div>
             <div onClick={details}>
                 <p>
-                    {job.name}
-                </p>
-                <p>
                     {job.title}
                 </p>
+                <p>
+                    Company: {job.name}
+                </p>
+                {job.employment_type.map(empType =><p> - {empType}</p> )}
+                <p>
+                    Address: {job.address}
+                </p>
             </div>
+            <hr/>
         </div>
+
     );
 };
 
