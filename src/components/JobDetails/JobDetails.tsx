@@ -5,6 +5,7 @@ interface IProps {
     job: IJob
 }
 const JobDetails: FC <IProps> = ({job}) => {
+
     return (
         <div>
             <div>
@@ -18,11 +19,11 @@ const JobDetails: FC <IProps> = ({job}) => {
                                 {job.title}
                             </p>
                         </div>
-                        <div>
-                            <p>
-                                {job.createdAt}
-                            </p>
-                        </div>
+                        {/*<div>*/}
+                        {/*    <p>*/}
+                        {/*        {job.createdAt}*/}
+                        {/*    </p>*/}
+                        {/*</div>*/}
                         <div>
                             <p>
                                 {job.description}
@@ -30,11 +31,15 @@ const JobDetails: FC <IProps> = ({job}) => {
                         </div>
                         <div>
                             Employment Type:
-                            {job.employment_type.map(empType =><p> - {empType}</p> )}
+                            <ul>
+                                {job.employment_type.map(empType =><li>{empType}</li> )}
+                            </ul>
                         </div>
                         <div>
                             Benefits:
-                            {job.benefits.map(benef =><p> - {benef}</p> )}
+                            <ul>
+                                {job.benefits.map(benef =><li>{benef}</li> )}
+                            </ul>
                         </div>
                         <button>APPLY NOW</button>
                     </div>
@@ -47,9 +52,32 @@ const JobDetails: FC <IProps> = ({job}) => {
             </div>
 
             <div>
-                <p>
-                    {job.name}
-                </p>
+                <div>
+                    <p>
+                        {job.name}
+                    </p>
+                </div>
+                <div>
+                    <p>
+                        {job.address}
+                    </p>
+                </div>
+                <div>
+                    <p>
+                        {job.phone}
+                    </p>
+                </div>
+                <div>
+                    <p>
+                        {job.email}
+                    </p>
+                </div>
+                <div>
+                    <iframe
+                        src={`https://maps.google.com/maps?q=${job.location.lat}, ${job.location.long}&z=15&output=embed`}
+                        width="600" height="450" loading="lazy"
+                        referrerPolicy="no-referrer-when-downgrade"></iframe>
+                </div>
 
             </div>
 
