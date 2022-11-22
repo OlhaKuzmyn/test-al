@@ -54,11 +54,6 @@ const JobDetails: FC <IProps> = ({job}) => {
                                     </p>
                                 </div>
                             </div>
-                            {/*<div>*/}
-                            {/*    <p>*/}
-                            {/*        {job.createdAt}*/}
-                            {/*    </p>*/}
-                            {/*</div>*/}
                             <div className="mb-5">
                                 <p className="text-slate-800 text-base">
                                     {job.description}
