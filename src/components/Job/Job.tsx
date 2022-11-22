@@ -18,11 +18,11 @@ const Job: FC <IProps> = ({job}) => {
     }
 
     return (
-        <div className="bg-slate-200 border-box rounded-md flex flex-row items-center gap-x-6 py-6 px-4 h-40 mb-2 cursor-pointer">
+        <div onClick={details} className="bg-slate-200 border-box rounded-md flex flex-row items-center gap-x-6 py-6 px-4 h-40 mb-2 cursor-pointer">
             <div>
                 <img className="rounded-full w-20 h-20" src={job.pictures[0]} alt={job.title}/>
             </div>
-            <div onClick={details}>
+            <div >
                 <div className="mb-2">
                     <p className="text-lg font-bold text-slate-800">
                         {job.title}
