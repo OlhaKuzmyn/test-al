@@ -13,7 +13,7 @@ const Jobs : FC = () => {
     }, [dispatch])
 
     return (
-        <div>
+        <div className="gap-y-2 border-box">
             {jobs.map(job=><Job key={job.id} job={job}/>)}
         </div>
     );
