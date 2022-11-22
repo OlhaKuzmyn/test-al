@@ -35,7 +35,7 @@ const Job: FC <IProps> = ({job}) => {
                 </div>
                 <div>
                     <p className="text-base text-slate-500">
-                        <FontAwesomeIcon icon={faLocationDot} className="mt-3.5 mr-2"/>
+                        <FontAwesomeIcon icon={faLocationDot} className=" mr-2"/>
                         Address: {job.address}
                     </p>
                 </div>
