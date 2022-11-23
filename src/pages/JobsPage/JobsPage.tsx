@@ -5,11 +5,11 @@ import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 
 const JobsPage: FC = () => {
     return (
-        <div className="max-w-screen-2xl container mx-auto mt-7 border-box ">
+        <div className=" sm:max-w-md md:max-w-screen-2xl container mx-auto mt-7 border-box ">
             <div>
                 <Jobs />
             </div>
-            <div className="bg-slate-200 max-w-lg h-14 mx-auto rounded-md my-12 items-center flex flex-row justify-between py-4 px-6 border-box">
+            <div className="bg-slate-200 max-w-lg h-14 mx-auto rounded-md my-12 items-center flex flex-row justify-between py-4 px-6 border-box ">
                 <button>
                     <FontAwesomeIcon icon={faLessThan} />
                 </button>
